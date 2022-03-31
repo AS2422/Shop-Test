@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         APP = this
 
-      //  navHostFragment = supportFragmentManager.findFragmentById(R.id.mainNavHostFragment) as? NavHostFragment ?: return
+        //navHostFragment = supportFragmentManager.findFragmentById(R.id.mainNavHostFragment) as? NavHostFragment ?: return
         navController = findNavController(R.id.mainNavHostFragment)
         val popupMenu = PopupMenu(this, null)
         popupMenu.inflate(R.menu.bottom_menu)

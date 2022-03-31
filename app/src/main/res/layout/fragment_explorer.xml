@@ -310,7 +310,7 @@
                 app:layout_constraintTop_toTopOf="@+id/tv_best_seller" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_products"
+                android:id="@+id/rv_best_seller"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 app:layout_constraintTop_toBottomOf="@+id/tv_best_seller"

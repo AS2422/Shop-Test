@@ -64,7 +64,7 @@
     </fragment>
     <fragment
         android:id="@+id/userFragment"
-        android:name="com.asafin24.shoptest.ui.UserFragment"
+        android:name="com.asafin24.shoptest.ui.user.UserFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" >
         <action

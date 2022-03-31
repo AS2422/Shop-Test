@@ -13,7 +13,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutProduct"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -60,6 +60,7 @@
             android:textSize="25sp"
             android:text="Iphone 12"
             android:textColor="@color/white"
+            android:elevation="1dp"
             />
 
         <TextView
@@ -72,6 +73,7 @@
             android:textSize="11sp"
             android:text="Super. Mega. Rapido"
             android:textColor="@color/white"
+            android:elevation="1dp"
             />
 
         <android.widget.Button
@@ -82,17 +84,20 @@
             android:layout_marginTop="26dp"
             android:textSize="11sp"
             android:textAllCaps="false"
-            android:text="Buy now!"/>
+            android:text="Buy now!"
+            android:elevation="1dp"/>
 
 
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_product"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="185dp"
         android:src="@drawable/previuos_iphone12"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/brandname"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="140dp"
+
         />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

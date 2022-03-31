@@ -20,15 +20,15 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/iv_product"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
                 android:src="@drawable/samsung"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/tagNew"
+                android:id="@+id/tagLike"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
                 android:layout_marginEnd="15dp">
 
                 <TextView
-                    android:id="@+id/iconCategoryShape"
+                    android:id="@+id/likeShape"
                     android:layout_width="27dp"
                     android:layout_height="27dp"
                     android:background="@drawable/shape_like"
@@ -47,7 +47,7 @@
                 </TextView>
 
                 <TextView
-                    android:id="@+id/iconCategory"
+                    android:id="@+id/likeStatus"
                     android:layout_width="11dp"
                     android:layout_height="10dp"
                     app:layout_constraintTop_toTopOf="parent"
@@ -55,7 +55,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:textSize="10sp"
-                    android:background="@drawable/ic_like"
+                    android:background="@drawable/ic_unlike"
                     android:backgroundTint="@color/orange">
                 </TextView>
 

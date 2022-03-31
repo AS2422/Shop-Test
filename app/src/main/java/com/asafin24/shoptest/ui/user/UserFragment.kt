@@ -1,4 +1,4 @@
-package com.asafin24.shoptest.ui
+package com.asafin24.shoptest.ui.user
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

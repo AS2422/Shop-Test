@@ -8,13 +8,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.asafin24.shoptest.R
 import com.asafin24.shoptest.adapter.CarouselAdapter
 import com.asafin24.shoptest.adapter.CategoryAdapter
-import com.asafin24.shoptest.adapter.ProductAdapter
+import com.asafin24.shoptest.adapter.BestSellerAdapter
 import com.asafin24.shoptest.databinding.FragmentExplorerBinding
-import com.asafin24.shoptest.model.ProductModel
 import kotlinx.android.synthetic.main.category_item.view.*
 import kotlinx.android.synthetic.main.fragment_explorer.*
 import java.lang.Exception
@@ -24,7 +24,8 @@ class ExplorerFragment : Fragment(), CategoryAdapter.Listener {
 
     lateinit var binding: FragmentExplorerBinding
     private val adapterCategory = CategoryAdapter(this)
-    private val productCategory = ProductAdapter()
+    private val productCategory = BestSellerAdapter()
+    private val hotSales = CarouselAdapter()
     private var city: String = ""
 
 
@@ -42,17 +43,22 @@ class ExplorerFragment : Fragment(), CategoryAdapter.Listener {
     }
 
     fun init() {
+
         binding.recyclerViewCategory.adapter = adapterCategory
 
-        binding.carousel.adapter = CarouselAdapter()
+        binding.carousel.adapter = hotSales
 
         binding.apply {
-            rvProducts.layoutManager = GridLayoutManager(context, 2)
-            rvProducts.adapter = productCategory
-            productCategory.addProduct(ProductModel(228))
-            productCategory.addProduct(ProductModel(3232))
-            productCategory.addProduct(ProductModel(4338))
-            productCategory.addProduct(ProductModel(4565))
+            rvBestSeller.layoutManager = GridLayoutManager(context, 2)
+            rvBestSeller.adapter = productCategory
+        }
+        val viewModel = ViewModelProvider(this).get(ExplorerViewModel::class.java)
+        viewModel.getExplorer()
+        viewModel.explorerList.observe(viewLifecycleOwner) { list ->
+            list.body()?.let {
+                productCategory.setList(it.best_seller)
+                hotSales.setList(it.home_store)
+            }
         }
 
         filter()
