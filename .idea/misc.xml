@@ -33,16 +33,16 @@
         <entry key="..\:/Android/ShopTest/app/src/main/res/drawable/spinner_background.xml" value="0.252" />
         <entry key="..\:/Android/ShopTest/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Android/ShopTest/app/src/main/res/layout/carousel_item_container.xml" value="0.36666666666666664" />
-        <entry key="..\:/Android/ShopTest/app/src/main/res/layout/category_item.xml" value="1.25" />
+        <entry key="..\:/Android/ShopTest/app/src/main/res/layout/category_item.xml" value="0.5" />
         <entry key="..\:/Android/ShopTest/app/src/main/res/layout/fragment_basket.xml" value="0.36666666666666664" />
         <entry key="..\:/Android/ShopTest/app/src/main/res/layout/fragment_blank.xml" value="0.25" />
         <entry key="..\:/Android/ShopTest/app/src/main/res/layout/fragment_cart.xml" value="0.36666666666666664" />
         <entry key="..\:/Android/ShopTest/app/src/main/res/layout/fragment_details.xml" value="0.17395833333333333" />
-        <entry key="..\:/Android/ShopTest/app/src/main/res/layout/fragment_explorer.xml" value="0.22" />
+        <entry key="..\:/Android/ShopTest/app/src/main/res/layout/fragment_explorer.xml" value="0.5" />
         <entry key="..\:/Android/ShopTest/app/src/main/res/layout/fragment_filter.xml" value="0.36666666666666664" />
         <entry key="..\:/Android/ShopTest/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Android/ShopTest/app/src/main/res/layout/fragment_like.xml" value="0.35260416666666666" />
-        <entry key="..\:/Android/ShopTest/app/src/main/res/layout/hot_sales_item.xml" value="0.25" />
+        <entry key="..\:/Android/ShopTest/app/src/main/res/layout/hot_sales_item.xml" value="0.33" />
         <entry key="..\:/Android/ShopTest/app/src/main/res/layout/product_item.xml" value="0.6493212669683258" />
         <entry key="..\:/Android/ShopTest/app/src/main/res/menu/bottom_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Android/ShopTest/app/src/main/res/menu/cities_menu.xml" value="0.36666666666666664" />
