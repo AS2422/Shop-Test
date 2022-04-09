@@ -10,3 +10,5 @@ pluginManagement {
 
 rootProject.name = "ShopTest"
 include ':app'
+include ':domain'
+include ':data'
