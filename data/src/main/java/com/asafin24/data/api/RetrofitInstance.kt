@@ -1,4 +1,4 @@
-package com.asafin24.data
+package com.asafin24.data.api
 
 import com.asafin24.domain.repository.ApiInterface
 import retrofit2.Retrofit

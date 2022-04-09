@@ -4,13 +4,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.asafin24.domain.model.home.PhonesModel
-import com.asafin24.data.Repository
+import com.asafin24.data.api.Repository
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
 class ExplorerViewModel: ViewModel() {
 
-    val repository = com.asafin24.data.Repository()
+    val repository = Repository()
     val explorerList: MutableLiveData<Response<PhonesModel>> = MutableLiveData()
 
     fun getExplorer() {
