@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/explorerFragment"
-        android:name="com.asafin24.shoptest.presentation.view.ExplorerFragment"
+        android:name="com.asafin24.feature_explorer.presentation.view.ExplorerFragment"
         android:label="fragment_explorer"
         tools:layout="@layout/fragment_explorer" >
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.asafin24.shoptest.presentation.view.details.DetailsFragment"
+        android:name="com.asafin24.feature_explorer.presentation.view.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" >
         <action
@@ -41,12 +41,12 @@
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
-        android:name="com.asafin24.shoptest.presentation.view.cart.CartFragment"
+        android:name="com.asafin24.feature_cart.presentation.view.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
     <fragment
         android:id="@+id/basketFragment"
-        android:name="com.asafin24.shoptest.presentation.view.basket.BasketFragment"
+        android:name="com.asafin24.feature_cart.presentation.view.BasketFragment"
         android:label="fragment_basket"
         tools:layout="@layout/fragment_basket" >
         <action
@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/likeFragment"
-        android:name="com.asafin24.shoptest.presentation.view.like.LikeFragment"
+        android:name="com.asafin24.feature_favorites.presentation.view.LikeFragment"
         android:label="fragment_like"
         tools:layout="@layout/fragment_like" >
         <action
@@ -64,7 +64,7 @@
     </fragment>
     <fragment
         android:id="@+id/userFragment"
-        android:name="com.asafin24.shoptest.presentation.view.user.UserFragment"
+        android:name="com.asafin24.feature_user.presentation.view.UserFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" >
         <action

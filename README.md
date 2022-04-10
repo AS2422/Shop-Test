@@ -6,6 +6,7 @@
 
 
 ## Используемый стек
+- Clean architecture
 - MVVM
 - Kotlin Coroutines
 - Retrofit

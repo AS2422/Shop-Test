@@ -48,8 +48,10 @@ android {
 
 dependencies {
 
-    implementation project(path: ':domain')
-    implementation project(path: ':data')
+    implementation project(path: ':Feature-Explorer')
+    implementation project(path: ':Feature-Cart')
+    implementation project(path: ':Feature-Favorites')
+    implementation project(path: ':Feature-User')
 
     //Glide
     implementation "com.github.bumptech.glide:glide:4.12.0"
