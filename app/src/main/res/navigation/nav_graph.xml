@@ -26,10 +26,13 @@
         <action
             android:id="@+id/action_homeFragment_to_userFragment"
             app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_explorerFragment_to_explorerActivity3"
+            app:destination="@id/explorerActivity3" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.asafin24.feature_explorer.presentation.view.DetailsFragment"
+        android:name="com.asafin24.feature_details.presentation.view.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" >
         <action
@@ -41,9 +44,9 @@
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
-        android:name="com.asafin24.feature_cart.presentation.view.CartFragment"
+        android:name="com.asafin24.feature_cart.presentation.view.BasketFragment"
         android:label="fragment_cart"
-        tools:layout="@layout/fragment_cart" />
+        tools:layout="@layout/fragment_basket" />
     <fragment
         android:id="@+id/basketFragment"
         android:name="com.asafin24.feature_cart.presentation.view.BasketFragment"
@@ -71,4 +74,8 @@
             android:id="@+id/action_userFragment2_to_homeFragment"
             app:destination="@id/explorerFragment" />
     </fragment>
+    <activity
+        android:id="@+id/explorerActivity3"
+        android:name="com.asafin24.feature_explorer.presentation.view.ExplorerActivity"
+        android:label="ExplorerActivity" />
 </navigation>

@@ -4,13 +4,32 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android/ShopTest/Feature-Cart/src/main/res/layout/fragment_basket.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android/ShopTest/Feature-Details/src/main/res/drawable/custom_button.xml" value="0.3125" />
+        <entry key="..\:/Android/ShopTest/Feature-Details/src/main/res/drawable/empty_drawable.xml" value="0.3125" />
+        <entry key="..\:/Android/ShopTest/Feature-Details/src/main/res/drawable/ic_basket.xml" value="0.3125" />
+        <entry key="..\:/Android/ShopTest/Feature-Details/src/main/res/drawable/ic_btn_back.xml" value="0.3125" />
+        <entry key="..\:/Android/ShopTest/Feature-Details/src/main/res/drawable/ic_camera.xml" value="0.3125" />
+        <entry key="..\:/Android/ShopTest/Feature-Details/src/main/res/drawable/ic_cpu.xml" value="0.3125" />
+        <entry key="..\:/Android/ShopTest/Feature-Details/src/main/res/drawable/ic_star.xml" value="0.3125" />
+        <entry key="..\:/Android/ShopTest/Feature-Details/src/main/res/drawable/ic_unlike.xml" value="0.3125" />
+        <entry key="..\:/Android/ShopTest/Feature-Details/src/main/res/drawable/s.xml" value="0.3125" />
+        <entry key="..\:/Android/ShopTest/Feature-Details/src/main/res/drawable/selector_ic_cart.xml" value="0.3125" />
+        <entry key="..\:/Android/ShopTest/Feature-Details/src/main/res/drawable/selector_ic_like.xml" value="0.3125" />
+        <entry key="..\:/Android/ShopTest/Feature-Details/src/main/res/layout/details_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android/ShopTest/Feature-Details/src/main/res/layout/fragment_details.xml" value="0.5" />
+        <entry key="..\:/Android/ShopTest/Feature-Details/src/main/res/layout/s.xml" value="0.36666666666666664" />
         <entry key="..\:/Android/ShopTest/Feature-Explorer/src/main/res/drawable/ic_geo.xml" value="0.224" />
+        <entry key="..\:/Android/ShopTest/Feature-Explorer/src/main/res/drawable/shape_new.xml" value="0.3145" />
+        <entry key="..\:/Android/ShopTest/Feature-Explorer/src/main/res/layout/activity_explorer.xml" value="0.36666666666666664" />
         <entry key="..\:/Android/ShopTest/Feature-Explorer/src/main/res/layout/category_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android/ShopTest/Feature-Explorer/src/main/res/layout/details_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android/ShopTest/Feature-Explorer/src/main/res/layout/fragment_details.xml" value="0.33" />
         <entry key="..\:/Android/ShopTest/Feature-Explorer/src/main/res/layout/fragment_details1.xml" value="0.35260416666666666" />
         <entry key="..\:/Android/ShopTest/Feature-Explorer/src/main/res/layout/fragment_explorer.xml" value="0.36666666666666664" />
         <entry key="..\:/Android/ShopTest/Feature-Explorer/src/main/res/layout/hot_sales_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Android/ShopTest/Feature-Explorer/src/main/res/layout/product_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Android/ShopTest/Feature-Explorer/src/main/res/menu/bottom_menu.xml" value="0.18645833333333334" />
+        <entry key="..\:/Android/ShopTest/Feature-Explorer/src/main/res/menu/cities_menu.xml" value="0.1" />
         <entry key="..\:/Android/ShopTest/Feature-Favorites/src/main/res/layout/fragment_like1.xml" value="0.35260416666666666" />
         <entry key="..\:/Android/ShopTest/Feature-User/src/main/res/layout/fragment_user1.xml" value="0.36666666666666664" />
         <entry key="..\:/Android/ShopTest/app/src/main/res/drawable/baseline_home_black_24dp.xml" value="0.1945" />

@@ -1,5 +1,7 @@
 package com.asafin24.feature_explorer.presentation.view
 
+import android.app.Activity
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
@@ -7,11 +9,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import com.asafin24.feature_explorer.APPexplorer
 import com.asafin24.feature_explorer.R
 import com.asafin24.feature_explorer.databinding.FragmentExplorerBinding
+import com.asafin24.feature_explorer.domain.model.home.BestSeller
 import com.asafin24.feature_explorer.presentation.viewModel.ExplorerViewModel
 import com.asafin24.shoptest.presentation.adapter.CarouselAdapter
 import com.asafin24.shoptest.presentation.adapter.CategoryAdapter
@@ -35,6 +41,9 @@ class ExplorerFragment : Fragment(), CategoryAdapter.Listener {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentExplorerBinding.inflate(layoutInflater, container, false)
+
+
+
         init()
         return binding.root
     }
@@ -47,7 +56,7 @@ class ExplorerFragment : Fragment(), CategoryAdapter.Listener {
 
         binding.recyclerViewCategory.adapter = adapterCategory
 
-        binding.carousel.adapter = hotSales
+        binding.carouselHotSales.adapter = hotSales
 
         binding.apply {
             rvBestSeller.layoutManager = GridLayoutManager(context, 2)
@@ -112,6 +121,16 @@ class ExplorerFragment : Fragment(), CategoryAdapter.Listener {
 
         binding.btnCloseFilter.setOnClickListener {
             binding.filterScreen.visibility = View.GONE
+        }
+    }
+
+    //передача параметров выбранной карты в Bundle для DetailFragment
+    companion object {
+        fun clickCard(bestSeller: BestSeller) {
+            val bundle = Bundle()
+            bundle.putSerializable("product", bestSeller)
+            //ExplorerActivity().supportFragmentManager.beginTransaction().add(R.id.mainNavHostFragment, DetailsFragment()).commit()
+           // APP.navController.navigate(R.id.action_explorerFragment_to_detailsFragment, bundle)
         }
     }
 }

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.asafin24.feature_explorer.R
 import com.asafin24.feature_explorer.domain.model.home.BestSeller
+import com.asafin24.feature_explorer.presentation.view.ExplorerFragment
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.product_item.view.*
 
@@ -36,6 +37,16 @@ class BestSellerAdapter : RecyclerView.Adapter<BestSellerAdapter.ProductVH>() {
             if (products[position].is_favorites) holder.itemView.likeStatus.setBackgroundResource(R.drawable.ic_like)
             else holder.itemView.likeStatus.setBackgroundResource(R.drawable.ic_unlike)
         }
+
+//        holder.itemView.setOnClickListener (object : View.OnClickListener {
+//            override fun onClick(v: View?) {
+//
+//                val explorerActivity = v!!.context as AppCompatActivity
+//                val detailFragment = DetailsFragment()
+//                explorerActivity.supportFragmentManager.beginTransaction().add(R.id.mainNavHostFragment, detailFragment).commit()
+//                ExplorerFragment.clickCard(products[holder.absoluteAdapterPosition])
+//            }
+//        })
     }
 
     override fun getItemCount(): Int {
@@ -46,6 +57,17 @@ class BestSellerAdapter : RecyclerView.Adapter<BestSellerAdapter.ProductVH>() {
     fun setList(list: List<BestSeller>) {
         products = list
         notifyDataSetChanged()
+    }
+
+    override fun onViewAttachedToWindow(holder: ProductVH) {
+        super.onViewAttachedToWindow(holder)
+        holder.itemView.setOnClickListener {
+            ExplorerFragment.clickCard(products[holder.absoluteAdapterPosition])
+        }
+    }
+
+    override fun onViewDetachedFromWindow(holder: ProductVH) {
+        holder.itemView.setOnClickListener(null)
     }
 
 }

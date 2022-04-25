@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import com.asafin24.feature_explorer.APPexplorer
+import com.asafin24.feature_explorer.presentation.view.ExplorerActivity
 import com.asafin24.shoptest.APP
 import com.asafin24.shoptest.R
 import com.asafin24.shoptest.databinding.ActivityMainBinding
@@ -33,5 +35,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.mainBottomNavView.setupWithNavController(menu, navController)
 
+        //APP.navController.navigate(R.id.action_explorerFragment_to_explorerActivity3)
     }
 }

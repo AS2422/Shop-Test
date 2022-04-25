@@ -1,5 +1,7 @@
 package com.asafin24.feature_explorer.domain.model.home
 
+import java.io.Serializable
+
 data class BestSeller(
     val discount_price: Int,
     val id: Int,
@@ -7,4 +9,4 @@ data class BestSeller(
     val picture: String,
     val price_without_discount: Int,
     val title: String
-)
+) : Serializable

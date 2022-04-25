@@ -162,6 +162,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/black"/>
 
+
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/ib_filter"
                     android:layout_width="wrap_content"
@@ -276,7 +277,7 @@
                     app:layout_constraintTop_toTopOf="@+id/tv_hot_sales" />
 
                 <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/carousel"
+                    android:id="@+id/carousel_hot_sales"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_hot_sales"
@@ -290,7 +291,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/carousel"
+                    app:layout_constraintTop_toBottomOf="@+id/carousel_hot_sales"
                     android:layout_marginStart="17dp"
                     android:layout_marginTop="24dp"
                     android:text="@string/best_seller"
