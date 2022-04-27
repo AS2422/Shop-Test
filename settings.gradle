@@ -10,8 +10,7 @@ pluginManagement {
 
 rootProject.name = "ShopTest"
 include ':app'
-include ':Feature-Explorer'
+include ':Feature-Main'
 include ':Feature-Cart'
-include ':Feature-Favorites'
-include ':Feature-User'
 include ':Feature-Details'
+include ':utils'
