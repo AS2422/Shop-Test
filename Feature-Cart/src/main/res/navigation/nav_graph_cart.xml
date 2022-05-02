@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/basketFragment"
-        android:name="com.asafin24.feature_cart.presentation.view.BasketFragment"
+        android:name="com.asafin24.feature_cart.presentation.view.CartFragment"
         android:label="fragment_basket"
-        tools:layout="@layout/fragment_basket" />
+        tools:layout="@layout/fragment_cart" />
 </navigation>

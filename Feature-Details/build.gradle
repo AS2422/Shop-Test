@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services' version '4.3.0' apply false
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -81,4 +83,7 @@ dependencies {
     
     // ViewPager2
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    // RoundedImageView
+    implementation 'com.makeramen:roundedimageview:2.3.0'
 }

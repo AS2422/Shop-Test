@@ -9,5 +9,12 @@
         android:id="@+id/detailsFragment"
         android:name="com.asafin24.feature_details.presentation.view.DetailsFragment"
         android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details"
+        >
+
+        <deepLink app:uri="jetnavapp://details" />
+
+    </fragment>
+
+    <include app:graph="@navigation/nav_graph_main"/>
 </navigation>

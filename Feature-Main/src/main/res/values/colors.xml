@@ -13,4 +13,7 @@
     <color name="greySpinner">#DCDCDC</color>
     <color name="background">#FAFAFA</color>
     <color name="backgroundMenu">#010035</color>
+    <color name="greyCart">#282843</color>
+
+
 </resources>

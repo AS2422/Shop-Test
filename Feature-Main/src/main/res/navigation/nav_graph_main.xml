@@ -7,5 +7,9 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.asafin24.feature_main.presentation.view.MainFragment"
-        android:label="MainFragment" />
+        android:label="MainFragment">
+
+        <deepLink app:uri="jetnavapp://main" />
+
+    </fragment>
 </navigation>

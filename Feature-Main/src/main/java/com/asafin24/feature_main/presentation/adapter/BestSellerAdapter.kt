@@ -1,9 +1,11 @@
 package com.asafin24.shoptest.presentation.adapter
 
 import android.annotation.SuppressLint
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.asafin24.feature_main.R
 import com.asafin24.feature_main.domain.model.home.BestSeller
@@ -38,15 +40,11 @@ class BestSellerAdapter : RecyclerView.Adapter<BestSellerAdapter.ProductVH>() {
             else holder.itemView.likeStatus.setBackgroundResource(R.drawable.ic_unlike)
         }
 
-//        holder.itemView.setOnClickListener (object : View.OnClickListener {
-//            override fun onClick(v: View?) {
-//
-//                val explorerActivity = v!!.context as AppCompatActivity
-//                val detailFragment = DetailsFragment()
-//                explorerActivity.supportFragmentManager.beginTransaction().add(R.id.mainNavHostFragment, detailFragment).commit()
-//                ExplorerFragment.clickCard(products[holder.absoluteAdapterPosition])
-//            }
-//        })
+        holder.itemView.setOnClickListener (object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                findNavController().navigate(Uri.parse("jetnavapp://details"))
+            }
+        })
     }
 
     override fun getItemCount(): Int {
@@ -57,17 +55,6 @@ class BestSellerAdapter : RecyclerView.Adapter<BestSellerAdapter.ProductVH>() {
     fun setList(list: List<BestSeller>) {
         products = list
         notifyDataSetChanged()
-    }
-
-    override fun onViewAttachedToWindow(holder: ProductVH) {
-        super.onViewAttachedToWindow(holder)
-        holder.itemView.setOnClickListener {
-            ExplorerFragment.clickCard(products[holder.absoluteAdapterPosition])
-        }
-    }
-
-    override fun onViewDetachedFromWindow(holder: ProductVH) {
-        holder.itemView.setOnClickListener(null)
     }
 
 }

@@ -12,5 +12,5 @@ rootProject.name = "ShopTest"
 include ':app'
 include ':Feature-Main'
 include ':Feature-Cart'
-include ':Feature-Details'
 include ':utils'
+include ':Feature-Details'

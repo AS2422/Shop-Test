@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.asafin24.feature_main.R
 import com.asafin24.feature_main.databinding.FragmentExplorerBinding
@@ -36,9 +37,6 @@ class ExplorerFragment : Fragment(R.layout.fragment_explorer), CategoryAdapter.L
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentExplorerBinding.inflate(layoutInflater, container, false)
-
-
-
         init()
         return binding.root
     }
@@ -117,15 +115,17 @@ class ExplorerFragment : Fragment(R.layout.fragment_explorer), CategoryAdapter.L
         binding.btnCloseFilter.setOnClickListener {
             binding.filterScreen.visibility = View.GONE
         }
+
+
     }
 
     //передача параметров выбранной карты в Bundle для DetailFragment
-    companion object {
-        fun clickCard(bestSeller: BestSeller) {
-            val bundle = Bundle()
-            bundle.putSerializable("product", bestSeller)
+//    companion object {
+//        fun clickCard(bestSeller: BestSeller) {
+//            val bundle = Bundle()
+//            bundle.putSerializable("product", bestSeller)
             //ExplorerActivity().supportFragmentManager.beginTransaction().add(R.id.mainNavHostFragment, DetailsFragment()).commit()
            // APP.navController.navigate(R.id.action_explorerFragment_to_detailsFragment, bundle)
-        }
-    }
+//        }
+//    }
 }

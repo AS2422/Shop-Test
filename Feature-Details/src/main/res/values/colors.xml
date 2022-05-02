@@ -10,6 +10,7 @@
     <color name="orange">#FF6E4E</color>
     <color name="whiteCategory">#FFFFFF</color>
     <color name="greyCategory">#B3B3C3</color>
+    <color name="greyText">#8D8D8D</color>
     <color name="greySpinner">#DCDCDC</color>
     <color name="background">#FAFAFA</color>
     <color name="backgroundMenu">#010035</color>
