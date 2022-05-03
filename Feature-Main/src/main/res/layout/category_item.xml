@@ -67,6 +67,7 @@
             android:text="Phones"
             android:layout_gravity="center"
             android:layout_marginTop="7dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:fontFamily="@font/mark_pro_medium"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,9 +18,6 @@ class CategoryAdapter(val listener: Listener) : RecyclerView.Adapter<CategoryAda
         CategoryModel("Books", R.drawable.ic_books)
     )
 
-
-
-
     class ViewHolder(item: View) : RecyclerView.ViewHolder(item) {
 
         val binding = CategoryItemBinding.bind(item)
@@ -32,10 +29,8 @@ class CategoryAdapter(val listener: Listener) : RecyclerView.Adapter<CategoryAda
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-
         val view = LayoutInflater.from(parent.context).inflate(R.layout.category_item, parent, false)
         return ViewHolder(view)
-
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -54,7 +49,6 @@ class CategoryAdapter(val listener: Listener) : RecyclerView.Adapter<CategoryAda
             category.isSelected = true
             notifyDataSetChanged()
         }
-
     }
 
     override fun getItemCount(): Int {
@@ -71,5 +65,4 @@ class CategoryAdapter(val listener: Listener) : RecyclerView.Adapter<CategoryAda
         fun onClickCategory(category: View)
         fun unClickCategory(category: View)
     }
-
 }

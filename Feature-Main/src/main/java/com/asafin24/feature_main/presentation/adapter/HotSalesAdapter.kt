@@ -10,7 +10,6 @@ import com.asafin24.feature_main.domain.model.home.HomeStore
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.hot_sales_item.view.*
 import kotlinx.android.synthetic.main.hot_sales_item.view.iv_product
-import kotlinx.android.synthetic.main.product_item.view.*
 
 class CarouselAdapter : RecyclerView.Adapter<CarouselVH>() {
 

@@ -49,7 +49,6 @@ android {
 dependencies {
 
     implementation project(path: ':Feature-Main')
-    implementation project(path: ':Feature-Cart')
     implementation project(path: ':Feature-Details')
     implementation project(path: ':utils')
 

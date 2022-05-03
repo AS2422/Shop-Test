@@ -1,13 +1,16 @@
 package com.asafin24.feature_details.presentation.view
 
+import android.graphics.Typeface
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -84,30 +87,35 @@ class DetailsFragment : Fragment(), ColorsAdapter.Listener, DetailsMenuAdapter.L
 
         viewModel.dataDetails.observe(viewLifecycleOwner, Observer { data ->
             data?.let {
-                binding.tvTitleProduct.text = data.title
-                binding.tvCpu.text = data.CPU
-                binding.tvCamera.text = data.camera
-                binding.tvOzu.text = data.ssd
-                binding.tvPzu.text = data.sd
-                binding.capacity1.text = data.capacity[0] + " GB"
-                binding.capacity2.text = data.capacity[1] + " GB"
-                binding.tvPrice.text = "$" + data.price.toString()
 
-                carouselDetailsAdapter.setList(it.images)
-                colorsAdapter.setColorList(it.color)
+                if (arguments?.get("id") == (data.id.toInt() - 1).toString() ) {
+                    binding.tvTitleProduct.text = data.title
+                    binding.tvCpu.text = data.CPU
+                    binding.tvCamera.text = data.camera
+                    binding.tvOzu.text = data.ssd
+                    binding.tvPzu.text = data.sd
+                    binding.capacity1.text = data.capacity[0] + " GB"
+                    binding.capacity2.text = data.capacity[1] + " GB"
+                    binding.tvPrice.text = "$" + data.price.toString()
 
-                if (data.isFavorites) binding.btnLike.setImageResource(R.drawable.ic_like)
-                else binding.btnLike.setImageResource(R.drawable.ic_unlike)
+                    carouselDetailsAdapter.setList(it.images)
+                    colorsAdapter.setColorList(it.color)
 
-                var chekedFavorites = data.isFavorites
-                binding.btnLike.setOnClickListener {
-                    chekedFavorites = !chekedFavorites
-
-                    if (chekedFavorites) binding.btnLike.setImageResource(R.drawable.ic_like)
+                    if (data.isFavorites) binding.btnLike.setImageResource(R.drawable.ic_like)
                     else binding.btnLike.setImageResource(R.drawable.ic_unlike)
-                }
 
-                for (i in 0..data.rating.toInt()) ratingList[i].visibility = View.VISIBLE
+                    var chekedFavorites = data.isFavorites
+                    binding.btnLike.setOnClickListener {
+                        chekedFavorites = !chekedFavorites
+
+                        if (chekedFavorites) binding.btnLike.setImageResource(R.drawable.ic_like)
+                        else binding.btnLike.setImageResource(R.drawable.ic_unlike)
+                    }
+
+                    for (i in 0..data.rating.toInt()) ratingList[i].visibility = View.VISIBLE
+                }
+            else Toast.makeText(context, "Данного товара не существует", Toast.LENGTH_SHORT).show()
+
             }
         })
 
@@ -125,11 +133,21 @@ class DetailsFragment : Fragment(), ColorsAdapter.Listener, DetailsMenuAdapter.L
     override fun onClickDetailsMenu(menu: View) {
         menu.line.visibility = View.VISIBLE
         menu.tv_details_category.setTextColor(ContextCompat.getColor(requireContext(),R.color.black))
+
+        val typeFaceBold: Typeface? =
+            context.let { ResourcesCompat.getFont(it!!, R.font.mark_pro_bold) }
+
+        menu.tv_details_category.typeface = typeFaceBold
     }
 
     override fun unClickDetailsMenu(menu: View) {
         menu.line.visibility = View.INVISIBLE
-        menu.tv_details_category.setTextColor(ContextCompat.getColor(requireContext(),R.color.black))
+        menu.tv_details_category.setTextColor(ContextCompat.getColor(requireContext(),R.color.greyText))
+
+        val typeFace: Typeface? =
+            context.let { ResourcesCompat.getFont(it!!, R.font.mark_pro) }
+
+        menu.tv_details_category.typeface = typeFace
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -138,6 +156,9 @@ class DetailsFragment : Fragment(), ColorsAdapter.Listener, DetailsMenuAdapter.L
             findNavController().navigate(Uri.parse("jetnavapp://main"))
         }
 
+        binding.btnCart.setOnClickListener {
+            findNavController().navigate(Uri.parse("jetnavapp://cart"))
+        }
     }
 
 }

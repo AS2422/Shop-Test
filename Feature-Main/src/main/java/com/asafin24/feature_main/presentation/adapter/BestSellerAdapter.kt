@@ -1,6 +1,7 @@
 package com.asafin24.shoptest.presentation.adapter
 
 import android.annotation.SuppressLint
+import android.graphics.Paint
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
@@ -9,9 +10,8 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.asafin24.feature_main.R
 import com.asafin24.feature_main.domain.model.home.BestSeller
-import com.asafin24.feature_main.presentation.view.ExplorerFragment
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.product_item.view.*
+import kotlinx.android.synthetic.main.best_seller_item.view.*
 
 class BestSellerAdapter : RecyclerView.Adapter<BestSellerAdapter.ProductVH>() {
 
@@ -21,12 +21,15 @@ class BestSellerAdapter : RecyclerView.Adapter<BestSellerAdapter.ProductVH>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductVH =
-        ProductVH(LayoutInflater.from(parent.context).inflate(R.layout.product_item, parent, false))
+        ProductVH(LayoutInflater.from(parent.context).inflate(R.layout.best_seller_item, parent, false))
 
     override fun onBindViewHolder(holder: ProductVH, position: Int): Unit = holder.itemView.run {
 
         holder.itemView.price_product.text = "$ ${products[position].discount_price}"
-        holder.itemView.old_price_product.text = "$ ${products[position].price_without_discount}"
+        holder.itemView.old_price_product.apply {
+            paintFlags = paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+            text = "$ ${products[position].price_without_discount}"
+        }
         holder.itemView.name_product.text = products[position].title
         Glide.with(this).load(products[position].picture).into(iv_product)
 
@@ -42,7 +45,7 @@ class BestSellerAdapter : RecyclerView.Adapter<BestSellerAdapter.ProductVH>() {
 
         holder.itemView.setOnClickListener (object : View.OnClickListener {
             override fun onClick(v: View?) {
-                findNavController().navigate(Uri.parse("jetnavapp://details"))
+                findNavController().navigate(Uri.parse("jetnavapp://details/${position}"))
             }
         })
     }

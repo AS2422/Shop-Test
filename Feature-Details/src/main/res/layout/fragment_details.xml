@@ -38,6 +38,7 @@
                 android:textColor="@color/backgroundMenu"
                 android:text="@string/product_details"
                 android:textSize="18sp"
+                android:fontFamily="@font/mark_pro_medium"
                 app:layout_constraintStart_toEndOf="@+id/btn_back"
                 app:layout_constraintTop_toTopOf="@+id/btn_back"
                 app:layout_constraintBottom_toBottomOf="@+id/btn_back"
@@ -84,11 +85,12 @@
 
                             <TextView
                                 android:id="@+id/tv_title_product"
-                                android:layout_width="wrap_content"
+                                android:layout_width="240dp"
                                 android:layout_height="wrap_content"
                                 app:layout_constraintTop_toTopOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                android:text="Samsung"
+                                android:text="Name"
+                                android:fontFamily="@font/mark_pro_medium"
                                 android:textSize="24sp"
                                 android:textColor="@color/black"
                                 android:layout_marginTop="28dp"
@@ -234,7 +236,8 @@
                                 app:layout_constraintStart_toStartOf="@+id/iv_cpu"
                                 app:layout_constraintEnd_toEndOf="@+id/iv_cpu"
                                 android:layout_marginTop="5dp"
-                                android:text="Exynos 990"
+                                android:fontFamily="@font/mark_pro"
+                                android:text="-"
                                 android:textSize="11sp"/>
 
                             <TextView
@@ -244,7 +247,8 @@
                                 app:layout_constraintTop_toTopOf="@+id/tv_cpu"
                                 app:layout_constraintStart_toStartOf="@+id/iv_camera"
                                 app:layout_constraintEnd_toEndOf="@+id/iv_camera"
-                                android:text="108 + 12 mp"
+                                android:fontFamily="@font/mark_pro"
+                                android:text="-"
                                 android:textSize="11sp"/>
 
                             <TextView
@@ -254,7 +258,8 @@
                                 app:layout_constraintTop_toTopOf="@+id/tv_cpu"
                                 app:layout_constraintStart_toStartOf="@+id/iv_ozu"
                                 app:layout_constraintEnd_toEndOf="@+id/iv_ozu"
-                                android:text="8 GB"
+                                android:fontFamily="@font/mark_pro"
+                                android:text="-"
                                 android:textSize="11sp"/>
 
                             <TextView
@@ -264,7 +269,8 @@
                                 app:layout_constraintTop_toTopOf="@+id/tv_cpu"
                                 app:layout_constraintStart_toStartOf="@+id/iv_pzu"
                                 app:layout_constraintEnd_toEndOf="@+id/iv_pzu"
-                                android:text="256 GB"
+                                android:fontFamily="@font/mark_pro"
+                                android:text="-"
                                 android:textSize="11sp"/>
 
                             <TextView
@@ -275,6 +281,7 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 android:layout_marginTop="29dp"
                                 android:layout_marginStart="30dp"
+                                android:fontFamily="@font/mark_pro_medium"
                                 android:text="Select color and capacity"
                                 android:textSize="16sp"/>
 
@@ -306,7 +313,7 @@
                                     android:button="@android:color/transparent"
                                     android:background="@drawable/custom_button_capacity"
                                     android:textColor="@drawable/selector_text_capacity"
-                                    android:text="128 GB"
+                                    android:text="-"
                                     android:textSize="13dp"
                                     android:paddingStart="15dp"
                                     android:paddingEnd="15dp"
@@ -319,7 +326,7 @@
                                     android:button="@android:color/transparent"
                                     android:background="@drawable/custom_button_capacity"
                                     android:textColor="@drawable/selector_text_capacity"
-                                    android:text="256 GB"
+                                    android:text="-"
                                     android:textSize="13dp"
                                     android:paddingStart="15dp"
                                     android:paddingEnd="15dp"
@@ -329,18 +336,20 @@
 
                             <androidx.cardview.widget.CardView
                                 android:id="@+id/btn_add_to_cart"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@id/radioGroup_capacity"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 android:layout_marginTop="27dp"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp"
                                 app:cardCornerRadius="10dp"
-                                android:layout_marginBottom="10dp">
+                                android:layout_marginBottom="20dp">
 
                                 <androidx.constraintlayout.widget.ConstraintLayout
-                                    android:layout_width="355dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="54dp"
                                     android:background="@color/orange">
 
@@ -353,6 +362,7 @@
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         android:layout_marginStart="45dp"
                                         android:text="@string/add_to_cart"
+                                        android:fontFamily="@font/mark_pro_bold"
                                         android:textColor="@color/white"
                                         android:textSize="20sp"/>
 
@@ -364,7 +374,8 @@
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         android:layout_marginEnd="38dp"
-                                        android:text="$1,500.00"
+                                        android:fontFamily="@font/mark_pro_bold"
+                                        android:text="$0"
                                         android:textColor="@color/white"
                                         android:textSize="20sp"/>
 

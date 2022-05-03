@@ -69,6 +69,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="21dp"
                 android:textSize="16sp"
+                android:fontFamily="@font/mark_pro_bold"
                 android:text="$1000"
                 android:textColor="@color/black"
                 />
@@ -82,6 +83,7 @@
                 app:layout_constraintTop_toTopOf="@id/price_product"
                 android:layout_marginStart="7dp"
                 android:textSize="10sp"
+                android:fontFamily="@font/mark_pro_medium"
                 android:text="@string/_1500"
                 />
 
@@ -93,6 +95,7 @@
                 app:layout_constraintStart_toStartOf="@+id/price_product"
                 android:layout_marginTop="5dp"
                 android:paddingBottom="15dp"
+                android:fontFamily="@font/mark_pro"
                 android:textSize="10sp"
                 android:text="Xiaomi Mi 10 Pro"
                 android:textColor="@color/black"

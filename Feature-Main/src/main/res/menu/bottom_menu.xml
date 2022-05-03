@@ -16,7 +16,8 @@
         app:cnb_iconColor="@color/white"
         app:cnb_textColor="@color/white"
         app:cnb_iconTintMode="@color/white"
-        app:cnb_backgroundColor="@color/backgroundMenu"/>
+        app:cnb_backgroundColor="@color/backgroundMenu"
+        />
 
     <item
         android:id="@+id/likeFragment"

@@ -41,6 +41,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/backgroundMenu"
                 android:text="@string/filter_options"
+                android:fontFamily="@font/mark_pro_medium"
                 app:layout_constraintStart_toEndOf="@+id/btn_close_filter"
                 app:layout_constraintTop_toTopOf="@+id/btn_close_filter"
                 app:layout_constraintBottom_toBottomOf="@+id/btn_close_filter"
@@ -55,6 +56,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/custom_button"
+                android:fontFamily="@font/mark_pro_medium"
                 android:backgroundTint="@color/orange"
                 android:text="@string/done"
                 android:textAllCaps="false"
@@ -65,6 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/brand"
+                android:fontFamily="@font/mark_pro_medium"
                 android:textColor="@color/backgroundMenu"
                 app:layout_constraintStart_toStartOf="@+id/btn_close_filter"
                 app:layout_constraintTop_toBottomOf="@+id/btn_close_filter"
@@ -86,6 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/price"
+                android:fontFamily="@font/mark_pro_medium"
                 android:textColor="@color/backgroundMenu"
                 app:layout_constraintStart_toStartOf="@+id/btn_close_filter"
                 app:layout_constraintTop_toBottomOf="@+id/spinner_brand"
@@ -107,6 +111,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/size"
+                android:fontFamily="@font/mark_pro_medium"
                 android:textColor="@color/backgroundMenu"
                 app:layout_constraintStart_toStartOf="@+id/btn_close_filter"
                 app:layout_constraintTop_toBottomOf="@+id/spinner_price"
@@ -158,7 +163,8 @@
                     android:drawableStart="@drawable/ic_geo"
                     android:drawableEnd="@drawable/ic_down"
                     android:textAllCaps="false"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/mark_pro_medium"/>
 
 
                 <androidx.appcompat.widget.AppCompatImageButton
@@ -185,7 +191,8 @@
                     android:layout_marginTop="20dp"
                     android:text="@string/select_category"
                     android:textSize="25sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/mark_pro_bold"/>
 
                 <TextView
                     android:id="@+id/tv_view_all"
@@ -197,7 +204,8 @@
                     android:textColor="@color/orange"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_select_category"
                     app:layout_constraintEnd_toEndOf="@+id/ib_filter"
-                    app:layout_constraintTop_toTopOf="@+id/tv_select_category" />
+                    app:layout_constraintTop_toTopOf="@+id/tv_select_category"
+                    android:fontFamily="@font/mark_pro"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_view_category"
@@ -259,6 +267,7 @@
                     android:layout_marginStart="17dp"
                     android:layout_marginTop="24dp"
                     android:text="@string/hot_sales"
+                    android:fontFamily="@font/mark_pro_bold"
                     android:textSize="25sp"
                     android:textColor="@color/black"/>
 
@@ -270,6 +279,7 @@
                     android:text="@string/see_more"
                     android:textAllCaps="false"
                     android:textColor="@color/orange"
+                    android:fontFamily="@font/mark_pro"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_hot_sales"
                     app:layout_constraintEnd_toEndOf="@+id/ib_filter"
                     app:layout_constraintTop_toTopOf="@+id/tv_hot_sales" />
@@ -293,6 +303,7 @@
                     android:layout_marginStart="17dp"
                     android:layout_marginTop="24dp"
                     android:text="@string/best_seller"
+                    android:fontFamily="@font/mark_pro_bold"
                     android:textSize="25sp"
                     android:textColor="@color/black"/>
 
@@ -302,6 +313,7 @@
                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:text="@string/see_more"
+                    android:fontFamily="@font/mark_pro"
                     android:textAllCaps="false"
                     android:textColor="@color/orange"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_best_seller"
@@ -318,7 +330,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="18dp"
                     android:layout_marginTop="16dp"
-                    tools:listitem="@layout/product_item"
+                    tools:listitem="@layout/best_seller_item"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 

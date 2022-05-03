@@ -9,10 +9,8 @@ import com.asafin24.feature_main.R
 
 class UserFragment : Fragment(R.layout.fragment_user) {
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
-
 
 }

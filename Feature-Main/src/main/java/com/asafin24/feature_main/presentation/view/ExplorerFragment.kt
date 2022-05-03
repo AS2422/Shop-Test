@@ -31,7 +31,6 @@ class ExplorerFragment : Fragment(R.layout.fragment_explorer), CategoryAdapter.L
     private val hotSales = CarouselAdapter()
     private var city: String = ""
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -115,17 +114,5 @@ class ExplorerFragment : Fragment(R.layout.fragment_explorer), CategoryAdapter.L
         binding.btnCloseFilter.setOnClickListener {
             binding.filterScreen.visibility = View.GONE
         }
-
-
     }
-
-    //передача параметров выбранной карты в Bundle для DetailFragment
-//    companion object {
-//        fun clickCard(bestSeller: BestSeller) {
-//            val bundle = Bundle()
-//            bundle.putSerializable("product", bestSeller)
-            //ExplorerActivity().supportFragmentManager.beginTransaction().add(R.id.mainNavHostFragment, DetailsFragment()).commit()
-           // APP.navController.navigate(R.id.action_explorerFragment_to_detailsFragment, bundle)
-//        }
-//    }
 }

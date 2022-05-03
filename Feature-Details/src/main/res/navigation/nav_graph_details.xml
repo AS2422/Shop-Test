@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_details"
         >
 
-        <deepLink app:uri="jetnavapp://details" />
+        <deepLink app:uri="jetnavapp://details/{id}" />
+
+        <argument
+            android:name="id"
+            app:argType="string" />
 
     </fragment>
 

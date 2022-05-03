@@ -19,8 +19,6 @@ class MainActivity : AppCompatActivity() {
         get() = findNavController(R.id.containerView)
 
     lateinit var binding: ActivityMainBinding
-//    lateinit var navController: NavController
-//    private var navHostFragment: NavHostFragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -28,17 +26,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        APP = this
-//
-//        //navHostFragment = supportFragmentManager.findFragmentById(R.id.mainNavHostFragment) as? NavHostFragment ?: return
-//        navController = findNavController(R.id.mainNavHostFragment)
-//        val popupMenu = PopupMenu(this, null)
-//        popupMenu.inflate(R.menu.bottom_menu)
-//        val menu = popupMenu.menu
-//
-//        binding.mainBottomNavView.setupWithNavController(menu, navController)
-
-        //APP.navController.navigate(R.id.action_explorerFragment_to_explorerActivity3)
     }
 
 

@@ -10,7 +10,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Feature-Cart" />
             <option value="$PROJECT_DIR$/Feature-Details" />
             <option value="$PROJECT_DIR$/Feature-Main" />
             <option value="$PROJECT_DIR$/app" />
