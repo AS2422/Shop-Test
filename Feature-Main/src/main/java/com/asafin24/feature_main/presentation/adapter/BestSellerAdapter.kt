@@ -59,5 +59,4 @@ class BestSellerAdapter : RecyclerView.Adapter<BestSellerAdapter.ProductVH>() {
         products = list
         notifyDataSetChanged()
     }
-
 }

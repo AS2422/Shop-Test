@@ -16,7 +16,6 @@ class DetailsMenuAdapter(val listener: Listener) : RecyclerView.Adapter<DetailsM
         SelectModel("Features")
     )
 
-
     class ViewHolder(item: View) : RecyclerView.ViewHolder(item) {
 
         val binding = DetailsMenuItemBinding.bind(item)
@@ -49,7 +48,6 @@ class DetailsMenuAdapter(val listener: Listener) : RecyclerView.Adapter<DetailsM
             category.isSelected = true
             notifyDataSetChanged()
         }
-
     }
 
     override fun getItemCount(): Int {
@@ -60,5 +58,4 @@ class DetailsMenuAdapter(val listener: Listener) : RecyclerView.Adapter<DetailsM
         fun onClickDetailsMenu(menu: View)
         fun unClickDetailsMenu(menu: View)
     }
-
 }

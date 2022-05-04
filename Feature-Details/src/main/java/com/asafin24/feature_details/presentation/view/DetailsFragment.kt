@@ -46,31 +46,16 @@ class DetailsFragment : Fragment(), ColorsAdapter.Listener, DetailsMenuAdapter.L
         return binding.root
     }
 
-    fun init() {
-
+    private fun init() {
         getData()
 
-        //carousel
-        binding.carouselImages.adapter = carouselDetailsAdapter
-        binding.carouselImages.clipToPadding = false
-        binding.carouselImages.clipChildren = false
-        binding.carouselImages.offscreenPageLimit = 3
-        binding.carouselImages.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
-
-        val compositePageTransformer = CompositePageTransformer()
-        compositePageTransformer.addTransformer(MarginPageTransformer(30))
-        compositePageTransformer.addTransformer { page, position ->
-            val r = 1 - abs(position)
-            page.scaleY = 0.85f + r * 0.25f
-        }
-
-        binding.carouselImages.setPageTransformer(compositePageTransformer)
-        //
+        carousel()
 
         binding.recyclerViewColors.adapter = colorsAdapter
         binding.recyclerViewDetailsMenu.adapter = detailsMenuAdapter
-
     }
+
+
 
     private fun getData() {
         val viewModel = ViewModelProvider(this).get(DetailsViewModel::class.java)
@@ -118,8 +103,25 @@ class DetailsFragment : Fragment(), ColorsAdapter.Listener, DetailsMenuAdapter.L
 
             }
         })
+    }
 
+    private fun carousel() {
+        //carousel
+        binding.carouselImages.adapter = carouselDetailsAdapter
+        binding.carouselImages.clipToPadding = false
+        binding.carouselImages.clipChildren = false
+        binding.carouselImages.offscreenPageLimit = 3
+        binding.carouselImages.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
 
+        val compositePageTransformer = CompositePageTransformer()
+        compositePageTransformer.addTransformer(MarginPageTransformer(30))
+        compositePageTransformer.addTransformer { page, position ->
+            val r = 1 - abs(position)
+            page.scaleY = 0.85f + r * 0.25f
+        }
+
+        binding.carouselImages.setPageTransformer(compositePageTransformer)
+        //
     }
 
     override fun onClickColors(color: View) {

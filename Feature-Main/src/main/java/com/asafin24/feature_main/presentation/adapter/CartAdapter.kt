@@ -54,5 +54,4 @@ class CartAdapter : RecyclerView.Adapter<CartAdapter.CartVH>() {
         products = list
         notifyDataSetChanged()
     }
-
 }

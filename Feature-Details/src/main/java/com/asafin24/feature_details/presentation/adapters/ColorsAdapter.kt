@@ -28,14 +28,12 @@ class ColorsAdapter(val listener: Listener) : RecyclerView.Adapter<ColorsAdapter
         }
     }
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ColorsVH {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.colors_item, parent, false)
         return ColorsVH(view)
     }
 
     override fun onBindViewHolder(holder: ColorsVH, position: Int) {
-
 
         holder.bind(colorsData[position], listener)
 

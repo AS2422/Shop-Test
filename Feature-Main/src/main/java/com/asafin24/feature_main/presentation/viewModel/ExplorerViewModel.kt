@@ -18,5 +18,4 @@ class ExplorerViewModel: ViewModel() {
             explorerList.value = repository.getExplorer()
         }
     }
-
 }

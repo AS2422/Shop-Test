@@ -44,7 +44,7 @@ class ExplorerFragment : Fragment(R.layout.fragment_explorer), CategoryAdapter.L
         popupMenu(fragment_explorer)
     }
 
-    fun init() {
+    private fun init() {
 
         binding.recyclerViewCategory.adapter = adapterCategory
 
@@ -54,6 +54,13 @@ class ExplorerFragment : Fragment(R.layout.fragment_explorer), CategoryAdapter.L
             rvBestSeller.layoutManager = GridLayoutManager(context, 2)
             rvBestSeller.adapter = productCategory
         }
+
+        getData()
+
+        filter()
+    }
+
+    private fun getData() {
         val viewModel = ViewModelProvider(this).get(ExplorerViewModel::class.java)
         viewModel.getExplorer()
         viewModel.explorerList.observe(viewLifecycleOwner) { list ->
@@ -62,8 +69,6 @@ class ExplorerFragment : Fragment(R.layout.fragment_explorer), CategoryAdapter.L
                 hotSales.setList(it.home_store)
             }
         }
-
-        filter()
     }
 
     override fun onClickCategory(category: View) {
