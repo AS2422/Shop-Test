@@ -5,7 +5,8 @@
 Приложение позволяет загружать из сети данные о продаваемой технике и спец. предложениях.
 
 ## Скриншоты
-![alt text](screenshots/1.jpg "1") ![alt text](screenshots/2.jpg "2") ![alt text](screenshots/3.jpg "3") ![alt text](screenshots/4.jpg "4")
+![alt text](screenshots/1.jpg "1") ![alt text](screenshots/2.jpg "2") 
+![alt text](screenshots/3.jpg "3") ![alt text](screenshots/4.jpg "4")
 
 ## Используемый стек
 - Clean architecture
